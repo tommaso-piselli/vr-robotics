@@ -2,20 +2,19 @@
 Progetto per la visualizzazione di Topic da Ros a Unity in un ambiente di Realtà Aumentata.
 
 ## Index
-- [0. Prerequisites]()
+- [Prerequisites](https://github.com/tommaso-piselli/vr-robotics#prerequisites)
 - [1. Oculus Setup](https://github.com/tommaso-piselli/vr-robotics#step-1-oculus-setup)
 - [2. Project Setup](https://github.com/tommaso-piselli/vr-robotics#step-2-project-setup-in-unity)
 - [3. Scene Setup](https://github.com/tommaso-piselli/vr-robotics#step-3-scene-setup)
-    - [3.1 Passthrough Manager](https://github.com/tommaso-piselli/vr-robotics#passthrough-manager)
-    - [3.2 UI Elements](https://github.com/tommaso-piselli/vr-robotics#passthrough-manager)
+    - [Passthrough Manager](https://github.com/tommaso-piselli/vr-robotics#passthrough-manager)
+    - [UI Elements](https://github.com/tommaso-piselli/vr-robotics#passthrough-manager)
 - [4. ROS Unity Integration](https://github.com/tommaso-piselli/vr-robotics#step-1-oculus-setup)
 
 
 ## Prerequisites
-Unity Version
-Ros Version
-Docker
-...
+- Unity Version: 2021.3.21f1
+- Ros Version: melodic
+- Ros on Docker: http://wiki.ros.org/docker/Tutorials/Docker
 
 ## STEP 1: Oculus Setup
 - Nell'Editor di Unity, creare un progetto `3D(URP)`.

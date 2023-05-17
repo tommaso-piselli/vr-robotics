@@ -2,11 +2,20 @@
 Progetto per la visualizzazione di Topic da Ros a Unity in un ambiente di Realtà Aumentata.
 
 ## Index
-- [1. Oculus Setup](https://github.com/tommaso-piselli/passthrough-robotics/edit/main/README.md#step-1-oculus-setup)
-- [2. Project Setup](https://github.com/tommaso-piselli/passthrough-robotics/edit/main/README.md#step-2-project-setup-in-unity)
-- [3. Scene Setup](https://github.com/tommaso-piselli/passthrough-robotics/edit/main/README.md#step-3-scene-setup)
-- [4. ROS Unity Integration](https://github.com/tommaso-piselli/passthrough-robotics/edit/main/README.md#step-4-ros-unity-integration)
+- [0. Prerequisites]()
+- [1. Oculus Setup](https://github.com/tommaso-piselli/vr-robotics#step-1-oculus-setup)
+- [2. Project Setup](https://github.com/tommaso-piselli/vr-robotics#step-2-project-setup-in-unity)
+- [3. Scene Setup](https://github.com/tommaso-piselli/vr-robotics#step-3-scene-setup)
+    - [3.1 Passthrough Manager](https://github.com/tommaso-piselli/vr-robotics#passthrough-manager)
+    - [3.2 UI Elements](https://github.com/tommaso-piselli/vr-robotics#passthrough-manager)
+- [4. ROS Unity Integration](https://github.com/tommaso-piselli/vr-robotics#step-1-oculus-setup)
 
+
+## Prerequisites
+Unity Version
+Ros Version
+Docker
+...
 
 ## STEP 1: Oculus Setup
 - Nell'Editor di Unity, creare un progetto `3D(URP)`.

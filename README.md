@@ -64,3 +64,15 @@ Progetto per la visualizzazione di Topic da Ros a Unity in un ambiente di RealtÃ
 - Si inserisca all'interno della `Canvas` una `RawImage` di dimensioni a piacere e si posizioni la `Canvas` per poter essere vista dalla camera.
 
 ## STEP 4: ROS Unity Integration
+- Aggiunta dei pacchetti di ROS in Unity:
+    - cliccare su `Package Manager > + > Add package from git Url` e inserire https://github.com/Unity-Technologies/ROS-TCP-Connector.git?path=/com.unity.robotics.ros-tcp-connector per aggiungere `ROS-TCP-Connector`.
+    - cliccare su `Package Manager > + > Add package from git Url` e inserire https://github.com/Unity-Technologies/ROS-TCP-Connector.git?path=/com.unity.robotics.visualizations per aggiungere `Unity Robotics Visualization`.
+
+- Aggiungere la cartella `RosMessagePath` alla directory del progetto Unity. All'interno della cartella vi saranno i messaggi di `sensor_msgs/` presi dal file system di ROS [si veda la cartella `Resources/RosMessagePath/sensor_msgs`].
+- Scrittura del file `Scripts/ImageSubscriber.cs`
+- Creare un `EmptyObject` chiamato `ImageSubscriber` e aggiungere l'omonimo script come Component. Passare come riferimento l'oggetto `RawImage` nella Hierarchy.
+
+
+- Aprire **Docker** e lanciare ROS su due terminali differenti:
+    - su uno lanciare il master con il comando ``` roslaunch ros_tcp_endpoint endpoint.launch ```;
+    - sull'altro lanciare la cattura (o il play di una rosbag)

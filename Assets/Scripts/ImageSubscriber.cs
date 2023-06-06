@@ -26,8 +26,9 @@ public class ImageSubscriber : MonoBehaviour
         byte[] imageBytes = msg.data;
 
         texture = new Texture2D((int)msg.width, (int)msg.height, TextureFormat.RGB24, false);
+        Debug.Log(msg.encoding);
 
-        BgrToRgb(imageBytes);
+        //BgrToRgb(imageBytes);
         Flip180(imageBytes);
 
         texture.LoadRawTextureData(imageBytes);
@@ -35,17 +36,26 @@ public class ImageSubscriber : MonoBehaviour
         rawImage.texture = texture;
     }
 
-    public void BgrToRgb(byte[] data)
+    public void BgrToRgb(byte[] bgrImage)
     {
-        for (int i = 0; i < data.Length; i += 3)
+        // Calculate the number of pixels in the image
+        int pixelCount = bgrImage.Length / 3;
+
+        // Create an output RGB image array with the same size
+        byte[] rgbImage = new byte[bgrImage.Length];
+
+        // Convert BGR to RGB by swapping the red (R) and blue (B) channels for each pixel
+        for (int i = 0; i < pixelCount; i++)
         {
-            byte dummy = data[i];
-            data[i] = data[i + 2];
-            data[i + 2] = dummy;
+            int bgrIndex = i * 3;
+            int rgbIndex = i * 3;
+
+            rgbImage[rgbIndex] = bgrImage[bgrIndex + 2];     // R channel
+            rgbImage[rgbIndex + 1] = bgrImage[bgrIndex + 1]; // G channel
+            rgbImage[rgbIndex + 2] = bgrImage[bgrIndex];     // B channel
         }
     }
-
-    public void Flip180(byte[] data)
+        public void Flip180(byte[] data)
     {
         int length = data.Length;
         int halfLength = length / 2;
